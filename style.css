@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--font);
+  height: var(--main-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--first-color);
+
+  h1 {
+    width: 360px;
+    font-size: var(--font-size-h1);
+    line-height: 40px;
+  }
+  span {
+    color: var(--second-color);
+  }
+}
+
+.main-container {
+  background-color: var(--second-bg-color);
+  height: var(--second-height);
+  width: var(--second-width);
+}
+
+.main-container .text-container {
+  margin-top: var(--margin-top-container);
+  margin-left: var(--margin-left-container);
+
+  p {
+    font-size: var(--font-size-p);
+    margin-top: 15px;
+  }
+}
+
+button {
+  font-family: var(--font);
+  font-size: 16px;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--first-color);
+  background-color: var(--second-color);
+  margin-top: 45px;
+}
+
+hr {
+  margin: 35px 52px 70px 52px;
+}
+
+.password-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  div {
+    background-color: #273549;
+    border-radius: var(--border-radius);
+
+    p {
+      padding: 15px;
+    }
+  }
+}
+:root {
+  --main-height: 100vh;
+  --font-size-h1: 40px;
+  --font-size-p: 20px;
+  --margin-top-container: 70px;
+  --margin-left-container: 60px;
+  --second-height: 550px;
+  --second-width: 550px;
+  --main-bg-color: #1f2937;
+  --second-bg-color: #861313;
+  --first-color: #ffffff;
+  --second-color: #10b981;
+  --font: "Karla", sans-serif;
+  --border-radius: 5px;
+}
