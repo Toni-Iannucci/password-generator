@@ -54,6 +54,23 @@ button:hover {
   background-color: #059669;
 }
 
+select{
+  display: block;
+  
+  color:var(--first-color);
+  background-color: var(--second-color);
+  margin-top: 30px;
+  border: none;
+  font-family: var(--font);
+  font-size: 16px;
+  padding: 10px;
+  border-radius: var(--border-radius);
+
+  option{
+    background-color: var(--second-bg-color);
+  }
+  
+}
 hr {
   margin: 35px 52px 70px 52px;
 }
