@@ -91,17 +91,31 @@ const characters = [
   "?",
   "/",
 ];
-let buttonPassword = document.querySelector("#generate-button");
-// cliquer sur le bouton
-// avoir un nombre random
-// nombre random * le nombre de trucs dans l'array
-// faire ça jusqu'à un nombre précis aux choix, genre 14
-// tant que on a pas atteint 14, ça continue et ça s'ajoute au p
-// Une fois fini on a notre password aléatoire
-buttonPassword.addEventListener("click", generatePassword);
-function generatePassword() {
-  let random = Math.floor(Math.random() * 1);
-  return random;
-  console.log(random);
-  for (let i = 0; i < characters.length; i++) {}
+let buttonPassword = document.querySelector("#generate-password");
+let lengthPassword = 14;
+let passwordOne = document.querySelector("#password-1");
+let passwordTwo = document.querySelector("#password-2");
+
+
+
+buttonPassword.addEventListener("click",generatePassword);
+
+
+function getRandom() {
+  return Math.floor(Math.random() * characters.length);
 }
+
+function generatePassword(){
+  passwordOne.innerText = ''
+  passwordTwo.innerText = ''
+  for (let i = 0; i < lengthPassword; i++) {
+    let random = getRandom();
+    passwordOne.innerText += characters[random];    
+  }
+  for (let i = 0; i < lengthPassword; i++) {
+    let random = getRandom();
+    passwordTwo.innerText += characters[random];    
+  }
+}
+
+
