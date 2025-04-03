@@ -48,16 +48,16 @@ button {
   background-color: var(--second-color);
   margin-top: 30px;
   cursor: pointer;
-  transition:  0.5s;
+  transition: 0.5s;
 }
 button:hover {
   background-color: #059669;
 }
 
-select{
+select {
   display: block;
-  
-  color:var(--first-color);
+
+  color: var(--first-color);
   background-color: var(--second-color);
   margin-top: 30px;
   border: none;
@@ -66,10 +66,9 @@ select{
   padding: 10px;
   border-radius: var(--border-radius);
 
-  option{
+  option {
     background-color: var(--second-bg-color);
   }
-  
 }
 hr {
   margin: 35px 52px 70px 52px;
@@ -78,15 +77,15 @@ hr {
 .password-container {
   display: flex;
   justify-content: space-evenly;
-  
 
   div {
     background-color: #273549;
     border-radius: var(--border-radius);
-
+    cursor: pointer;
 
     p {
       padding: 15px;
+      color: var(--second-color);
     }
   }
 }
@@ -98,8 +97,8 @@ hr {
   --margin-left-container: 60px;
   --second-height: 550px;
   --second-width: 550px;
-  --main-bg-color: #1C1C1C;
-  --second-bg-color: #1F2937;
+  --main-bg-color: #1c1c1c;
+  --second-bg-color: #1f2937;
   --first-color: #ffffff;
   --second-color: #10b981;
   --font: "Karla", sans-serif;

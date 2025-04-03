@@ -98,11 +98,12 @@ let passwordTwo = document.querySelector("#password-2");
 let selectValue = document.querySelector("#number-select");
 
 // Function to select the lenght of the password
+selectValue.addEventListener("change", getValueOfSelectOnChange);
+
 function getValueOfSelectOnChange() {
   let value = selectValue.value;
   lengthPassword = value;
 }
-selectValue.getValueOfSelectOnChange = getValueOfSelectOnChange;
 
 // Function to have the password
 buttonPassword.addEventListener("click", generatePassword);
@@ -123,3 +124,12 @@ function generatePassword() {
     passwordTwo.innerText += characters[random];
   }
 }
+
+// Fonction pour copier un texte
+function copyTextToClipboard() {
+  navigator.clipboard.writeText(this.textContent);
+  alert("password copied");
+}
+
+passwordTwo.addEventListener("click", copyTextToClipboard);
+passwordOne.addEventListener("click", copyTextToClipboard);
