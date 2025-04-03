@@ -95,27 +95,31 @@ let buttonPassword = document.querySelector("#generate-password");
 let lengthPassword = 14;
 let passwordOne = document.querySelector("#password-1");
 let passwordTwo = document.querySelector("#password-2");
+let selectValue = document.querySelector("#number-select");
 
+// Function to select the lenght of the password
+function getValueOfSelectOnChange() {
+  let value = selectValue.value;
+  lengthPassword = value;
+}
+selectValue.getValueOfSelectOnChange = getValueOfSelectOnChange;
 
-
-buttonPassword.addEventListener("click",generatePassword);
-
+// Function to have the password
+buttonPassword.addEventListener("click", generatePassword);
 
 function getRandom() {
   return Math.floor(Math.random() * characters.length);
 }
 
-function generatePassword(){
-  passwordOne.innerText = ''
-  passwordTwo.innerText = ''
+function generatePassword() {
+  passwordOne.innerText = "";
+  passwordTwo.innerText = "";
   for (let i = 0; i < lengthPassword; i++) {
     let random = getRandom();
-    passwordOne.innerText += characters[random];    
+    passwordOne.innerText += characters[random];
   }
   for (let i = 0; i < lengthPassword; i++) {
     let random = getRandom();
-    passwordTwo.innerText += characters[random];    
+    passwordTwo.innerText += characters[random];
   }
 }
-
-
